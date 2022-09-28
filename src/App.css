@@ -1,3 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #282c34;
+  background-image: url("./images/bcg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #f0f8ff;
+  font-family: "Ruda", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +70,18 @@
     transform: rotate(360deg);
   }
 }
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 300px;
+  max-height: 100vh;
+}
+
+

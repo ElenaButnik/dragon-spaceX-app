@@ -1,0 +1,132 @@
+
+
+.Container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 12px;
+}
+.Section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-top: 15px;
+}
+.Description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Name {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.About {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  text-align: justify;
+ }
+
+.About::after{
+  content: "";
+  display: block;
+  width: 95vw;
+  padding-bottom: 15px;
+  border-bottom: 1pt solid rgba(255, 255, 255, 0.3);
+}
+
+.AboutLink {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.AboutLink::after {
+  content: "";
+  display: block;
+  width: 95vw;
+  padding-bottom: 15px;
+  border-bottom: 1pt solid rgba(255, 255, 255, 0.3);
+}
+.AboutLink span {
+  text-transform: uppercase;
+}
+
+.AboutLink p {
+  text-transform: lowercase;
+}
+.Link {
+  display: inline-block;
+  margin-left: 4px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+.Param {
+  display: flex;
+  justify-content: space-between;
+}
+.Img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  }
+
+@media screen and (min-width: 480px) {
+  .Container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Container {
+    max-width: 768px;
+    font-size: 16px;
+  }
+  .About::after{
+    width:40vw;
+  }
+    .AboutLink::after {
+      width:40vw;
+    }
+  .Section {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 35px;
+  }
+  .Description {
+    padding-right: 35px;
+  }
+  .Name {
+    margin-bottom: 15px;
+  }
+
+  .Link {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Container {
+    max-width: 1200px;
+  }
+.About::after{
+  width:40vw;
+}
+  .AboutLink::after {
+    width:40vw;
+  }
+ }
+
+ 
