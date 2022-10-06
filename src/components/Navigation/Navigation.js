@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeUser } from "../../redux/User/reducers";
 import { getIsLoggedIn } from "../../redux/User/selectors";
 import { removeDragon } from "../../redux/myDragons/reducers";
-import { ReactComponent as Logo } from '../../images/logo.svg';
+import { ReactComponent as Logo } from "../../images/logo.svg";
 
 import s from "./Navigation.module.css";
 
@@ -24,7 +24,7 @@ export function Navigation() {
         <div className={s.headerInner}>
           <nav className={s.nav}>
             <NavLink to="/" className={s.title}>
-                      <Logo style={{width: 200, height: 40}}/>
+              <Logo style={{ width: 200, height: 40 }} />
             </NavLink>
             <ul className={s.list}>
               {isLoggedIn ? (

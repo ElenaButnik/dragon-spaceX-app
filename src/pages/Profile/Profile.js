@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getMyDragonList } from "../../redux/myDragons/selectors";
 import { removeDragon } from "../../redux/myDragons/reducers";
@@ -31,10 +32,13 @@ export function Profile() {
           remove all
         </button>
       ) : (
-        <>
+        <div className={s.Section}>
           <h2>Choose the dragon you want to fly by!</h2>
+          <NavLink to="/dragons" className={s.navLink}>
+                     go to Dragons
+                    </NavLink>
           <img src={picture} alt="dragon in open air" className={s.Pic} />
-        </>
+        </div>
       )}
     </div>
   );
