@@ -1,11 +1,34 @@
-import { MainPage } from "./pages/Main";
+import { Routes, Route } from "react-router-dom";
 import { RevolvingDot } from "react-loader-spinner";
-import { useDispatch, useSelector } from "react-redux";
-import { getDragonItem, getLoading, getStatus } from "./redux/selectors";
+import { useSelector } from "react-redux";
+import loadable from "@loadable/component";
+import { Navigation } from "./components/Navigation/Navigation";
+import { getStatus } from "./redux/DragonItem/selectors";
+import { DragonList } from "./pages/Dragons/Dragons";
+import { Profile } from "./pages/Profile/Profile";
+import { getIsLoggedIn } from "./redux/User/selectors";
 import "./App.css";
+
+const Dragon = loadable(() => import("./pages/Dragon/Dragon.js"), {
+  resolveComponent: (components) => components.Dragon,
+});
+const Home = loadable(() => import("./pages/Home/Home.js"), {
+  resolveComponent: (components) => components.Home,
+});
+const Register = loadable(
+  () => import("./pages/RegisterPage/RegisterPage.js"),
+  {
+    resolveComponent: (components) => components.Register,
+  }
+);
+const LoginPage = loadable(() => import("./pages/LoginPage/LoginPage.js"), {
+  resolveComponent: (components) => components.LoginPage,
+});
 
 function App() {
   const status = useSelector(getStatus);
+  const isLoggedIn = useSelector(getIsLoggedIn);
+
   return (
     <div className="App">
       {status === "pending" && (
@@ -25,7 +48,22 @@ function App() {
           visible={true}
         />
       )}
-      <MainPage />
+
+      <Navigation />
+      {isLoggedIn !== null ? (
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<Dragon />} />
+          <Route path="/dragons" element={<DragonList />} />
+          <Route path="/profile" element={<Profile />} />{" "}
+        </Routes>
+      ) : (
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<Register />} />
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+      )}
     </div>
   );
 }

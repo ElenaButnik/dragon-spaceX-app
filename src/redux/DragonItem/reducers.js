@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getThunkData } from "./thunks";
+import { getThunkData } from "../DragonItem/thunks";
 
 export const dragonSlice = createSlice({
   name: "Dragon",

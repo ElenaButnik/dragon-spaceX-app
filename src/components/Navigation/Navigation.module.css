@@ -1,0 +1,104 @@
+.header {
+  min-height: 70px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: inherit;
+  background-color: #21547f;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.headerInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+align-items: center; 
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+.title {
+  cursor: pointer;
+  color: #fcf1f1;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: larger;
+  font-family: "Allerta Stencil", sans-serif;
+}
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.item {
+  cursor: pointer;
+}
+
+
+.navLink {
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  color: #fcf1f1;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navLink:focus,
+.navLink:hover,
+.btnNavLink:focus,
+.btnNavLink:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .nav {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+  }
+  .navLink {
+    font-size: 18px;
+  }
+  .headerInner {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .list{
+    padding-left: 100px;
+  }
+  .item:last-of-type{
+    padding-left: 250px;
+    }
+    
+}
+.Btn {
+  cursor: pointer;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

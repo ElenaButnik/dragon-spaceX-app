@@ -1,0 +1,31 @@
+.Container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.Item{
+    padding-bottom: 50px;
+}
+
+.Title{
+text-transform: uppercase;
+}
+.Descr{
+    padding-top: 20px;
+}
+.List {
+    list-style: none;
+}
+
+.Btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .Btn:hover,
+  .Btn:focus {
+    background-color: #174097;
+  }

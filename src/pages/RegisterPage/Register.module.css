@@ -1,0 +1,11 @@
+.Link{
+    font-size: 20px;
+    color: rgb(248, 228, 228);
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.Link:hover,
+.Link:focus {
+   color: #174097;
+}

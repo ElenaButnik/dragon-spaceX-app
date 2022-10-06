@@ -1,3 +1,24 @@
+#You are welcome to Dragon SpaceX App produced for MadAppGang Company
+
+![project image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.geekwire.com%2F2022%2Fbillionaire-kicks-off-new-orbital-missions-with-spacex-featuring-spacewalk-and-starlink-tests%2F&psig=AOvVaw3G03F9ofzNK6x0P8pEFDG-&ust=1665182090072000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNDm1PDUzPoCFQAAAAAdAAAAABAD)
+
+The main goal of App is opening and displaying information about the Dragon rocket from SpaceX. You can also see the details of the selected rocket and add it to your profile. The profile is protected by mandatory user loginsation or registration.
+
+#Deploy
+
+App was deployed to Netlify by settings in netlify.toml file using folder 'build' with production assembling and 'redirects' section with settings to hostins SPA (for any 'url' return 'index.html').
+
+[build]
+publish = "build"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+App deployed using script 'deploy' wich start script 'predeploy' and  collect the latest version of the application. 
+Every time to update App use command 'npm run deploy'.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

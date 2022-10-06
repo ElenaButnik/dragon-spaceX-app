@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchDragon } from "../services/API";
-
+import { fetchDragon } from "../../services/API";
 export const getThunkData = createAsyncThunk(
   "getDragon",
   async (_, { rejectWithValue }) => {

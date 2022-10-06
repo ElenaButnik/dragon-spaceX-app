@@ -1,13 +1,10 @@
 import { useState } from "react";
-import "./Slider.css";
 import BtnSlider from "./BtnSlider";
-import { useSelector } from "react-redux";
-import { getDragonItem } from "../../redux/selectors";
+import "./Slider.css";
 
-export default function Slider() {
-  const dragon = useSelector(getDragonItem);
+export function Slider({ dataSlider }) {
   const [slideIndex, setSlideIndex] = useState(1);
-  const dataSlider = dragon?.flickr_images;
+  const lastSlide = dataSlider.length - 1;
 
   const nextSlide = () => {
     if (slideIndex !== dataSlider.length) {
@@ -31,27 +28,26 @@ export default function Slider() {
 
   return (
     <div className="container-slider">
-      {dataSlider?.map((image, index) => {
-        return (
-          <div
-            key={index}
-            className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-          >
-            <img
-              src={image}
-              alt={image}
-              //   className="keen-slider__slide"
-              // className={s.Img}
-            />
-          </div>
-        );
-      })}
+      {dataSlider &&
+        dataSlider?.flickr_images?.map((image, index) => {
+          return (
+            <div
+              key={index}
+              className={
+                slideIndex === index + 1 ? "slide active-anim" : "slide"
+              }
+            >
+              <img src={image} alt={image} />
+            </div>
+          );
+        })}
       <BtnSlider moveSlide={nextSlide} direction={"next"} />
       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
       <div className="container-dots">
-        {Array.from({ length: 4 }).map((item, index) => (
+        {dataSlider?.flickr_images.map((item, index) => (
           <div
+            key={index}
             onClick={() => moveDot(index + 1)}
             className={slideIndex === index + 1 ? "dot active" : "dot"}
           ></div>

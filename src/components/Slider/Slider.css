@@ -1,17 +1,12 @@
 .container-slider {
-    max-width: 700px;
-    height: 500px;
-    margin: 100px auto 0;
-    position: relative;
+    max-width: 500px;
+    height: 300px;
+    margin: 50px auto 0;
+     position: relative; 
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
-  @media screen and (max-width: 768px){
-    .container-slider {
-      margin: 100px 10px 0;
-    }
-  }
-  .slide {
+   .slide {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -58,8 +53,7 @@
     transform: translateY(-60%);
   }
   
-  
-  .container-dots {
+    .container-dots {
     position: absolute;
     bottom: 10px;
     left: 50%;
